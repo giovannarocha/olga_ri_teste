@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'base/pages/page_login.dart';
+//import 'base/pages/page_login.dart';
 import 'base/pages/page_login_email.dart';
-import 'base/pages/page_login_password.dart';
+//import 'base/pages/page_login_password.dart';
 
 void main() => runApp(
   MaterialApp(
       theme: ThemeData(
-        fontFamily: 'FiraSans',
+        
       ),
-
+      home: PageLoginEmail(),
       debugShowCheckedModeBanner: false,
       /*
       Devido o enunciado do teste, ter a palavra "telas", fiz desta forma (trës telas), porém
@@ -16,9 +16,9 @@ void main() => runApp(
       para fazer tudo em uma tela só por serem pequenos blocos. 
       */
 
-      routes: {
+     /* routes: {
         "/":(context) => PageLogin(),
         "/PageLoginEmail":(context) => PageLoginEmail(),
         "/PageLoginPassword":(context) => PageLoginPassword()
-      },
+      },*/
     ));

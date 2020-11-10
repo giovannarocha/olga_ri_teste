@@ -40,7 +40,12 @@ class PageLogin extends StatelessWidget {
               children: <Widget> [
                  TextDefault('VAMO DE SALADA?', 16, cor: MyColors.myGreyFont,),
                  TextDefault('Falta Pouco para você matar sua \n fome de Olga Ri ;)', 16),
-                 MyYellowButton('ENTRAR', isSmallButton: false,),
+                 MyYellowButton('ENTRAR',
+                  "/PageLoginEmail",
+                  (){},
+                  isSmallButton: false,
+                  
+                  ),
                  TextDefault('Ou entre com:', 12),
                  Container(
                    padding: EdgeInsets.only(left: 87, right: 87),
@@ -101,5 +106,8 @@ class PageLogin extends StatelessWidget {
         ],
       ),
     );
+    
   }
+  
 }
+

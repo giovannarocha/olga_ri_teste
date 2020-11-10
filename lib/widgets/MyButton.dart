@@ -6,8 +6,10 @@ class MyYellowButton extends StatelessWidget {
 
     final String texto;
     final bool isSmallButton;
+    final String routeName;
+    final Function function;
 
-    MyYellowButton (this.texto, {this.isSmallButton = true});
+    MyYellowButton (this.texto, this.routeName, this.function, {this.isSmallButton = true});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class MyYellowButton extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50)
         ),
-        onPressed: (){},
+        onPressed: () => function,
         child: Text(texto, 
         style: TextStyle(
           color: Colors.white,
