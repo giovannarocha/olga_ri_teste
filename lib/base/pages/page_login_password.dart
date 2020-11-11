@@ -96,7 +96,12 @@ class PageLoginPassword extends StatelessWidget {
                                             children: <Widget>[
                                               GestureDetector(
                                                   child:
-                                                      TextDefault('Cancelar', 12)),
+                                                      FlatButton(
+                                                        child: TextDefault('Cancelar', 12),
+                                                        onPressed: () => Navigator.pop(context),
+                                                        ),
+                                                        
+                                                      ),
                                               MyYellowButton("ENTRAR", () {})
                                             ],
                                           ),
