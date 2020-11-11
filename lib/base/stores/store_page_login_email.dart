@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 part 'store_page_login_email.g.dart';
 
@@ -8,7 +7,7 @@ abstract class _StorePageLoginEmailBase with Store {
   @observable
   bool emailIsCorrect = true;
   @action
-  void main (value){
-    emailIsCorrect = value;
+  validarEmail (value){
+    value == 'joao.pinedo@gmail.com' ? emailIsCorrect = true: emailIsCorrect = false;
   }
 } 

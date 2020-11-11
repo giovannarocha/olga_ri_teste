@@ -29,11 +29,11 @@ mixin _$StorePageLoginEmail on _StorePageLoginEmailBase, Store {
       ActionController(name: '_StorePageLoginEmailBase');
 
   @override
-  void main(dynamic value) {
+  dynamic validarEmail(dynamic value) {
     final _$actionInfo = _$_StorePageLoginEmailBaseActionController.startAction(
-        name: '_StorePageLoginEmailBase.main');
+        name: '_StorePageLoginEmailBase.validarEmail');
     try {
-      return super.main(value);
+      return super.validarEmail(value);
     } finally {
       _$_StorePageLoginEmailBaseActionController.endAction(_$actionInfo);
     }

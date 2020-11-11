@@ -5,12 +5,14 @@ class MyLoginInput extends StatelessWidget {
   
 
   final String hint;
+  final TextEditingController controller;
 
-  MyLoginInput(this.hint); 
+  MyLoginInput(this.hint, this.controller); 
 
 
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       decoration: InputDecoration(
         hintText: hint,
         hintStyle: TextStyle(

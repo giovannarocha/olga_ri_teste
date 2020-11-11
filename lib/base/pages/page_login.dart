@@ -1,13 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:olga_ri/utils/MyColors.dart';
 import 'package:olga_ri/widgets/MyButton.dart';
 import 'package:olga_ri/widgets/MyLabel.dart';
 
-class PageLogin extends StatelessWidget {
+class PageLogin extends StatefulWidget {
+  @override
+  _PageLoginState createState() => _PageLoginState();
+}
+
+class _PageLoginState extends State<PageLogin> {
   @override
 
 
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown
+  ]);
     Size size = MediaQuery.of(context).size;
     return Container(
       child: Column(
@@ -40,9 +50,7 @@ class PageLogin extends StatelessWidget {
               children: <Widget> [
                  TextDefault('VAMO DE SALADA?', 16, cor: MyColors.myGreyFont,),
                  TextDefault('Falta Pouco para você matar sua \n fome de Olga Ri ;)', 16),
-                 MyYellowButton('ENTRAR',
-                  "/PageLoginEmail",
-                  (){},
+                 MyYellowButton('ENTRAR', _entrar,
                   isSmallButton: false,
                   
                   ),
@@ -106,8 +114,10 @@ class PageLogin extends StatelessWidget {
         ],
       ),
     );
-    
+
   }
-  
+        _entrar(){
+                   Navigator.pushReplacementNamed(context, "/PageLoginEmail");
+                 }
 }
 

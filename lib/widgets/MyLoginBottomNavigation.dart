@@ -37,7 +37,7 @@ class MyLoginBottomNavigation extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 GestureDetector(child: TextDefault('Cancelar', 12)),
-                MyYellowButton(text, '/PageLogin3', function)
+                MyYellowButton(text, function)
               ],
             ),
           )
